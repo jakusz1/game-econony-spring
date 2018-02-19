@@ -1,4 +1,4 @@
-package pl.jakusz.gameeconomyspring;
+package pl.jakusz.gameeconomyspring.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.AbstractWebSocketMessageBrokerConfigurer;
