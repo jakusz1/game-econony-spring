@@ -1,38 +1,27 @@
 package pl.jakusz.gameeconomyspring.model;
 
-import javax.persistence.*;
-import java.io.Serializable;
-
-@Entity
-@Table(name = "transfer")
-public class Transfer implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-
-    @ManyToOne
-    private User minusUser;
-
-    @ManyToOne
-    private User plusUser;
-
+public class Transfer{
+    private String receiverUsername;
     private int value;
 
-    public Transfer(User minusUser, User plusUser, int value) {
-        this.minusUser = minusUser;
-        this.plusUser = plusUser;
+    public Transfer(String receiverUsername, int value) {
+        this.receiverUsername = receiverUsername;
         this.value = value;
     }
 
-    public User getMinusUser() {
-        return minusUser;
+    public String getReceiverUsername() {
+        return receiverUsername;
     }
 
-    public User getPlusUser() {
-        return plusUser;
+    public void setReceiverUsername(String receiverUsername) {
+        this.receiverUsername = receiverUsername;
     }
 
     public int getValue() {
         return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 }

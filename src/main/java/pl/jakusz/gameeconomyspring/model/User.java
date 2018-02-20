@@ -39,4 +39,7 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+    public int changeBalance(int value){
+        return this.balance+=value;
+    }
 }
