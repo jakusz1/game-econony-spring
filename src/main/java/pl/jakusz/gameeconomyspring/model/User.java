@@ -1,19 +1,31 @@
 package pl.jakusz.gameeconomyspring.model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Table(name = "user")
+@Table(name = "player")
 public class User {
+
     public static int START_BALANCE = 15000;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "balance")
     private int balance;
+
+    protected User(){
+
+    }
 
     public User(String name, int balance) {
         this.name = name;
