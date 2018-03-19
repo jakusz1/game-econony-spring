@@ -6,11 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "player")
-public class User {
-
+public class User implements Serializable{
     public static int START_BALANCE = 15000;
 
     @Id

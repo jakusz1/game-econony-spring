@@ -1,8 +1,13 @@
 package pl.jakusz.gameeconomyspring.model;
 
+
 public class Transfer{
     private String receiverUsername;
     private int value;
+
+    public Transfer(){
+
+    }
 
     public Transfer(String receiverUsername, int value) {
         this.receiverUsername = receiverUsername;
